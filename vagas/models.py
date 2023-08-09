@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 class Vaga(models.Model):
   titulo_vaga     = models.CharField(max_length=25)
   descricao_vaga  = models.TextField()
-  foto_vaga       = models.ImageField(upload_to='pictures',blank=True)
+  foto_vaga       = models.ImageField(upload_to='uploads/%Y/%m/%d/')
   salario_vaga    = models.FloatField()
   localidade_Vaga = models.CharField(max_length=60)
   owner = models.ForeignKey(

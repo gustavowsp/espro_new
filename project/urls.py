@@ -24,5 +24,4 @@ urlpatterns = [
     path('',include('vagas.urls')),
     path('usuario/',include('users.urls')),
 ] 
-
 urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

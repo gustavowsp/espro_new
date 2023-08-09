@@ -35,6 +35,7 @@ def criar_vaga(request):
     return render(request,'vagas/create-vaga.html')
 
   foto = request.POST.get('picture__input')
+  print(foto)
   titulo =request.POST.get('nome-vaga')
   salario =request.POST.get('salario')
   localidade =request.POST.get('localidade')
