@@ -1,0 +1,64 @@
+{% extends 'global/global.html'%}
+{% load static %}
+
+{% block 'css' %}
+  <link rel="stylesheet" href="{% static 'vagas/view-vaga.css'%} ">
+{% endblock 'css' %}
+
+
+{% block 'body' %}
+{% include 'global/partials/__navbar.html' %}
+
+<div class="container">
+  <div class="row" id="VgaBox">
+
+    <div class="col-12 col-md-6  order-1">
+      <div id="DescImg">
+
+        <div id="img">
+          <img src="{{vaga.foto_vaga.url}}" alt="">
+        </div>
+        <h1>{{vaga.titulo_vaga}}</h1>
+        <p>{{vaga.descricao_vaga}}</p>
+
+      </div>
+    </div>
+    <div class="col-12 col-md-6  order-2 ">
+      
+      <div id="BoxVaga">
+        
+        <div id="InfoVaga">
+
+          <div id="Cima">
+            <span>
+              <h2>Salário</h2>
+              <h4>R$ {{vaga.salario_vaga}}</h4>
+            </span>
+
+            <span>
+              <h2>Localidade</h2>
+              <h4>{{vaga.localidade_Vaga}}</h4>
+            </span>
+          </div>
+          
+          <div id="Meio">
+            <h2>Postado por</h2>
+            <h4>{{vaga.owner}}</h4>
+          </div>
+          
+          <div id="Baixo" class="mt-4">
+            <button class="btn btn-success">Candidatar-se</button>
+          </div>
+
+        
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+{% endblock 'body' %}
+

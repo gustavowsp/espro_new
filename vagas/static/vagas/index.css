@@ -1,0 +1,194 @@
+html,body{
+  height: 100%;
+}
+
+
+#image-box{
+  background-image: url(img/Estacao.png);
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  background-repeat: no-repeat;
+  
+}
+#InitialBox /*Formatando caixa de boas vindas*/
+{
+  height: 100%;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#Text{
+  position: relative;
+  top: -80px;
+}
+#Text h1{
+  font-size: 4em;
+  margin: 0px;
+  font-weight: 800;
+}
+#Text h4{
+  font-size: 1.4em;
+  margin: 0px;
+  letter-spacing: 4px;
+  font-weight: 400;
+  position: relative;
+  top: 15px;
+}
+
+.blue{
+  color: #5A98BF;
+}
+
+
+#VagasRecomendadasBox{
+  position: relative;
+  top: -25px;
+}
+#VagasRecomendadasBox form{
+  width: 60%;
+  margin: auto;
+  text-align: center;
+}
+#VagasRecomendadasBox form input{
+  outline: none;
+  border: 0.5px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+  
+  padding: 12px 30px;
+  width: 60%;
+  text-align: left;
+}
+
+#VagasRecomendadas {
+  margin-top: 100px;
+}
+#VagasRecomendadas h4,h2{
+  text-align: center;
+  margin: 0px;
+}
+#VagasRecomendadas h4{
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  color: #261F1A;
+}
+#VagasRecomendadas h2{
+  position: relative;
+  top: -10px;
+  font-size: 4em;
+  color: #D9A566;
+  font-weight: 900;
+}
+#Vagas .col-3{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding: 0px;
+}
+#Vagas .vaga div{
+  padding: 5px 10px;
+}
+#Vagas .vaga{
+  margin: auto;
+  margin-bottom: 40px;
+  height: 320px;
+  position: relative;
+  background-color: #734D2C;
+  box-shadow: 5px 3px 4px rgba(0, 0, 0, 0.2);
+}
+#Vagas .vaga h3{
+  font-size: 1.5em;
+  letter-spacing: 1px;
+  margin: 0px;
+  margin-bottom: 10px;
+  color: #D9C5AD;
+}
+#Vagas .vaga p{
+  line-height: 110%;
+  font-size: 0.9em;
+  margin: 0px;
+  color: #ffffffbd;
+  font-weight: 400;
+  font-size: 0.8em;
+
+}
+
+#Vagas .vaga .img-vaga img{
+  width: 100%;
+}
+#Vagas .vaga .img-vaga{
+  opacity: 0.9;
+  overflow: hidden;
+  padding: 0px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+#Vagas .vaga .candidatar-vaga{
+  position: absolute;
+  bottom: 0px;
+  background-color: #D9A566;
+  width: 100%;
+  text-align: center;
+}
+#Vagas .vaga .candidatar-vaga:hover::after{
+  width: 100%;
+}
+#Vagas .vaga .candidatar-vaga::after{
+  content: ' ';
+  background-color: #05c7f29d;
+  z-index: 1;
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 1s;
+}
+#Vagas .vaga .candidatar-vaga a
+{
+  text-transform: capitalize;
+  text-decoration: none;
+  font-size: 0.86em;
+  letter-spacing: 5px;
+  color: black !important;
+  font-weight: bold;
+  z-index: 10;
+  position: relative;
+}
+
+
+
+@media (max-width: 575.98px) { 
+  #Vagas .vaga{
+    margin: auto;
+    width: 60%;
+    margin-bottom: 40px;
+ }
+ #VagasRecomendadasBox form{
+  width: 85%;
+ }
+ #VagasRecomendadasBox form input{
+  width: 100%;
+  margin-bottom: 20px;
+ }
+ #VagasRecomendadas h2{
+  font-size: 2.4em;
+  top: 0px;
+  margin-bottom: 20px;
+ }
+ #VagasRecomendadas h4{
+  font-size: 0.8em;
+ }
+}
+
+@media (max-width: 767.98px) {  }
+
+@media (max-width: 991.98px) {  }
+
+@media (max-width: 1199.98px) { }
+
+@media (max-width: 1399.98px) {  }
+

@@ -1,0 +1,36 @@
+{% extends 'global/global.html'%}
+{% load static %}
+
+{% block 'css' %}
+  <link rel="stylesheet" href="{% static 'users/loginpage.css'%} ">
+{% endblock 'css' %}
+
+
+{% block 'body' %}
+{% include 'global/partials/__navbar.html' %}
+<main id="LoginBox" class="container-fluid">
+
+  <div id="Form">
+
+    <h1>Autenticação</h1>
+    <form method="post">
+      {% csrf_token %}
+      <div>
+        {%include 'global/partials/__message.html'%}
+
+        {% if user.is_authenticated %}
+        <h3 class="text-light">Você está autenticado</h3>
+        {%else%}
+          <input type="text" placeholder="Usuário" name='username'>
+          <input type="password" placeholder="Senha" name='password'>
+          <button class="btn-dark btn">Autenticar-se</button>
+        {% endif %}
+      </div>
+    </form>
+  </div>
+
+</main>
+
+
+{% endblock 'body' %}
+

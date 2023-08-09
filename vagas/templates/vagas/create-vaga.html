@@ -1,0 +1,56 @@
+{% extends 'global/global.html'%}
+{% load static %}
+
+{% block 'css' %}
+  <link rel="stylesheet" href="{% static 'vagas/create.css'%} ">
+  
+{% endblock 'css' %}
+
+
+{% block 'body' %}
+  {% include 'global/partials/__navbar.html' %}
+
+  <div class="container">
+    <form method='post'>
+      {% csrf_token %}
+      <div class="row" id="FormBox">
+        
+        <div class="col-12 order-md-1 order-2 col-md-5">
+          <div id="ImgInput">
+            <label class="picture" for="picture__input" tabIndex="0">
+              <span class="picture__image"></span>
+            </label>
+            
+            <input type="file" name="picture__input" id="picture__input">
+          </div>
+          
+        </div>
+        <div class="col-12 order-md-2 order-1 col-md-7">
+
+          <div id="form">
+            <input type="text" name="nome-vaga" placeholder="Nome da vaga">
+            <input type="number" name="salario" placeholder="Salário">
+            <input type="text" name="localidade" placeholder="localidade">
+            <div>
+
+              <textarea name="desc-vaga" placeholder="Descrição da vaga"></textarea>
+              
+            </div>
+          </div>
+
+
+          </div>
+
+          
+        </div>
+        <button type="submit" class="btn btn-dark btn-block w-50">Registrar nova vaga</button>
+    </form>
+
+    </div>
+{% endblock 'body' %}
+
+{% block 'js' %}
+    <script src="{% static 'vagas/criacao-vagas.js' %}"></script>
+{% endblock 'js' %}
+
+

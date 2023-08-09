@@ -1,0 +1,77 @@
+{% extends 'global/global.html'%}
+{% load static %}
+
+{% block 'css' %}
+  <link rel="stylesheet" href="{% static 'vagas/index.css'%} ">
+{% endblock 'css' %}
+
+
+{% block 'body' %}
+<div id="image-box" class="container-fluid no-gutters">
+  {% include 'global/partials/__navbar.html' %}
+
+
+  <div class="container " id="InitialBox">
+
+    <div id="Text">
+      <h4>NEXT STATION</h4>
+      <h1>
+        <span class="blue">Your</span>
+        new Job
+        </h1>
+        <a href="{%url 'register'%}" class="btn btn-info btn-sm mt-3"> Cadastrar-se</a>
+    </div>
+
+  </div>  
+</div>
+
+<div id="VagasRecomendadasBox" class="container">
+
+  <form>
+    <input type="text" placeholder="Busque sua vaga aqui!">
+      <button type="submit" class="btn btn-dark btn">Pesquisar</button>
+
+  </form>
+
+
+  <div id="VagasRecomendadas">
+
+    <h4>Seu próximo emprego pode ser uma das</h4>
+    <h2>Vagas recomendas</h2>
+    
+    <div id="Vagas" class="row">
+
+
+      {%for vaga in vagas%}
+      <div class="col-12 col-sm-6 col-lg-3 px-2">
+        <div class="vaga">
+          
+          <div class="img-vaga">
+            <img src="{{vaga.foto_vaga.url}}" alt="">
+          </div>
+
+          <div class="info-vaga">
+            <h3>{{vaga.titulo_vaga}}</h3>
+            <p>{{vaga.descricao_vaga}}</p>
+          </div>
+
+        <div class="candidatar-vaga">
+          <a href="{% url 'vagas:detalhe-vaga' vaga.id %}">Candidatar-se</a>
+        </div>              
+        </div>
+      </div>
+      {%endfor%}
+
+
+
+      
+
+  
+    </div>
+
+  </div>
+
+</div>
+
+{% endblock 'body' %}
+

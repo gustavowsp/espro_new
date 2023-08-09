@@ -1,0 +1,77 @@
+
+
+#NavBar {
+  padding-top: 30px;
+  padding-bottom: 60px;
+  background-color: #0B1421;
+  border: 0.5px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+#NavBar a{
+  color: white !important;
+}
+
+#ImgInput{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#ImgInput .picture{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#ImgInput input{
+  display: none;
+}
+#ImgInput .picture__image img{
+  width: 100%;
+
+}
+#ImgInput .picture{
+  background-color: #BABBBF;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 400px;
+  height: 200px;
+  overflow: hidden;
+}
+
+#FormBox{ 
+  box-sizing: border-box;
+  border-radius: 6px;
+  border: 0.5px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+
+  padding: 20px 10px;
+  background-color:#DBDBDB ;
+  padding-bottom: 80px;
+  margin-top: 40px;
+}
+
+#form input,#form textarea{
+  border-radius: 6px;
+
+  border: 0.5px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  border: none;
+  outline: none;
+  height: 40px;
+  padding: 5px 10px;
+}
+#form textarea{
+  width: 100%;
+  margin-top: 20px;
+  height: 100px;
+}
+
+form button{
+  display: block;
+  margin: auto;
+  text-align: center;
+  position: relative;
+  top: -60px;
+}
